@@ -1,6 +1,8 @@
 from flask import Flask
 from flask import render_template
 from flask import request
+from flask import redirect
+from flask import url_for
 
 from url_processor import processURL
 from url_processor import prepareURLfromVidID
@@ -17,11 +19,11 @@ def submitLink():
 	videoID = processURL(vidURL);
 	return redirect(url_for('showLink', vidID=videoID))
 
-@app.route('/showLink', methods=['POST'])
+@app.route('/showLink', methods=['GET'])
 def showLink():
-	vidID=request.form.get('vidID')
-
-	return render_template('showLink.html', )
+	vidID=request.args.get('vidID')
+	shareableLink = prepareURLfromVidID(vidID);
+	return render_template('showLink.html', shareableURL = shareableLink)
 
 if __name__=="__main__":
 	app.run()

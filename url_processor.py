@@ -1,8 +1,11 @@
-shareableFolder = 'static/share'
+
+shareableFolder = "static/share"
 
 def processURL(vidURL):
+	return 'a'
 
 
 
 def prepareURLfromVidID(vidID):
-	return '.' + '/' + shareableFolder + '/' + vidID + '.html'
+	print(vidID)
+	return "." + "/" + shareableFolder + "/" + vidID + ".html"
