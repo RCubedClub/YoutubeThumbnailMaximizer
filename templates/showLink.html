@@ -12,26 +12,15 @@
 	</style>
 </head>
 <body>
-
 	<div class="container">
 		<div class="center-block">
 			<h2>Youtube Thumbnail Maximizer</h2>
 		</div>
 		<div class="panel panel-primary">
 			<div class="panel-body">
-				<form action="submitLink" method="post">
-					<div class="colgroup" style="width:70%; height:20px ; margin: 10px auto">
-						<div class="col-md-4">
-							Youtube Video URL : 
-						</div>
-						<div class="col-md-8">
-							<input style="width:80%" type="URL" name="vidUrl">
-						</div>
-					</div>
-				</form>
+				<h4>Your shareable link is : <a href="{{ shareableURL }}">{{ shareableURL }}</a></h4>
 			</div>
 		</div>
 	</div>
-
 </body>
 </html>
