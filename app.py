@@ -16,13 +16,13 @@ def main():
 @app.route('/submitLink', methods=['POST'])
 def submitLink():
 	vidURL = request.form.get('vidURL')
-	videoID = processURL(vidURL);
+	videoID = processURL(vidURL, request.url_root);
 	return redirect(url_for('showLink', vidID=videoID))
 
 @app.route('/showLink', methods=['GET'])
 def showLink():
 	vidID=request.args.get('vidID')
-	shareableLink = prepareURLfromVidID(vidID);
+	shareableLink = prepareURLfromVidID(vidID, request.url_root);
 	return render_template('showLink.html', shareableURL = shareableLink)
 
 if __name__=="__main__":
