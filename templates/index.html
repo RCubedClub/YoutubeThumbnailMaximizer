@@ -8,21 +8,42 @@
 		body{margin-top:20px;}
 		input{background-color: white;color:black;}
 		button{background-color: white;}
+
 	</style>
 </head>
 <body>
 
 	<div class="container">
 		<div class="center-block">
-			<h2>Youtube Thumbnail Maximizer</h2>
+			<h3>Youtube Thumbnail Maximizer</h3>
 		</div>
 		<div class="panel panel-primary">
 			<div class="panel-body">
+				<div class="head-container" style="border:1px solid black;height:280px;">
+					<div>
+						<div class="col-md-5">
+							<h4>Before</h4>
+							<img style="height:200px;width: auto; margin: auto;" src="../static/images/before.jpg">
+						</div>
+						<div class="col-md-2">
+							<h1> => </h1>
+						</div>
+						<div class="col-md-5">
+							<h4>After using this site</h4>
+							<img style="height:200px;width: auto; margin: auto;" src="../static/images/after.jpg">
+						</div>
+					</div>
+					<div>
+					<h4>Larger thumbnails lead to more people viewing your shared video and hence a larger number of views over your video.</h4>
+					</div>
+				</div>
+				
+				<br><br>
 				<div class="form-container">
 					<form action="submitLink" method="post">
 						<div class="colgroup" style="width:70%; height:20px ; margin: 10px auto">
 							<div class="col-md-3">
-								Youtube Video URL : 
+								<b>Youtube Video URL : </b>
 							</div>
 							<div class="col-md-7">
 								<input style="width:100%" type="URL" name="vidURL">
