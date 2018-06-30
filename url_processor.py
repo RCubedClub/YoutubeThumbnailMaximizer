@@ -6,7 +6,7 @@ from flask import request
 shareableFolder = "static/share"
 
 def processURL(vidURL, siteURL):
-	urlparts = vidURL.split('?');
+	urlparts = vidURL.split('?')
 	vidID = urlparts[1][2:]
 	# print 'vid id is :' + vidID
 	# print 'site is '+siteURL
@@ -82,7 +82,7 @@ def processURL(vidURL, siteURL):
 </html>'''
 	
 	filePath = shareableFolder + '/' + vidID + '.html'
-	f= open(filePath,"w")
+	f= open(filePath,"w+")
 	f.write(html)
 	f.close()
 

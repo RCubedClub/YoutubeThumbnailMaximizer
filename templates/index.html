@@ -5,10 +5,9 @@
 	<link rel="stylesheet" href="../static/css/bootstrap.css">
 
 	<style type="text/css">
-		body
-		{
-			margin-top:20px;
-		}
+		body{margin-top:20px;}
+		input{background-color: white;color:black;}
+		button{background-color: white;}
 	</style>
 </head>
 <body>
@@ -19,21 +18,23 @@
 		</div>
 		<div class="panel panel-primary">
 			<div class="panel-body">
-				<form action="submitLink" method="post">
-					<div class="colgroup" style="width:70%; height:20px ; margin: 10px auto">
-						<div class="col-md-3">
-							Youtube Video URL : 
+				<div class="form-container">
+					<form action="submitLink" method="post">
+						<div class="colgroup" style="width:70%; height:20px ; margin: 10px auto">
+							<div class="col-md-3">
+								Youtube Video URL : 
+							</div>
+							<div class="col-md-7">
+								<input style="width:100%" type="URL" name="vidURL">
+							</div>
+							<div class="col-md-2">
+								<button type="Submit">Submit</button>
+							</div>						
 						</div>
-						<div class="col-md-7">
-							<input style="width:100%" type="URL" name="vidURL">
-						</div>
-						<div class="col-md-2">
-							<button type="Submit">Submit</button>
-						</div>						
-					</div>
-					<br>
-					
-				</form>
+						<br>
+						
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
